@@ -30,7 +30,8 @@ class Storage():
   def populate(self):
     cur = self.db.cursor()
     cur.execute("INSERT INTO scores(score) VALUES(1234)")
-
+    self.db.commit()
+    
   def score(self):
     cur = self.db.cursor()
     cur.execute("SELECT * FROM scores")
