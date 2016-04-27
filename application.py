@@ -10,7 +10,9 @@ def hello_world():
   storage = Storage()
   storage.populate()
   score = storage.score()
-  return "Hello Beijing 123, %d!" % score
+  usr = os.getenv('MYSQL_USERNAME')
+  passwd = os.getenv('MYSQL_PASSWORD')
+  return "Hello Beijing 123, %d 账号%s 密码%s !" % score % usr %passwd
 
 class Storage():
   def __init__(self):
