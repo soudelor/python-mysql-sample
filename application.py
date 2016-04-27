@@ -12,7 +12,7 @@ def hello_world():
   score = storage.score()
   usr = os.getenv('MYSQL_USERNAME')
   passwd = os.getenv('MYSQL_PASSWORD')
-  return "Hello Beijing 123, %d %s %s !" % score % usr %passwd
+  return "Hello Beijing 123, %d %s %s !" % （score， usr ，passwd）
 
 class Storage():
   def __init__(self):
